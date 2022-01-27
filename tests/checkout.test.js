@@ -16,7 +16,7 @@ describe("Checkout process", () => {
 
         const titre = await page.$eval(".inventory_item_name",(e)=>e.innerHTML);
         console.log(titre);
-        expect(titre).toContain('Sauce Labs Backpack');
+        expect(titre).toContain('Sauce Labs Bike Light');
 
         await page.click('#checkout')
         const titre2 = await page.$eval(".title",(e)=>e.innerHTML);
@@ -27,7 +27,7 @@ describe("Checkout process", () => {
         await page.click('#continue')
 
         const result = await page.$eval('.inventory_item_name',(e)=>e.innerHTML);
-        expect(result).toContain("Sauce Labs Backpack")
+        expect(result).toContain("Sauce Labs Bike Light")
         await page.screenshot({path: './tests/img/checkout_screen.png'});
 
     }, timeout);
