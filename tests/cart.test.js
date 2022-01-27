@@ -18,7 +18,7 @@ describe("Cart features", () => {
 
         const titre = await page.$eval(".inventory_item_name",(e)=>e.innerText);
         console.log(titre);
-        expect(titre).toContain('Sauce Labs Backpack');
+        expect(titre).toContain('Sauce Labs Bike Light');
         await page.screenshot({path: './tests/img/cart_screen.png'});
 
 
